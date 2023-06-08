@@ -1,0 +1,39 @@
+.header__general__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  width: 100%;
+}
+.header__general__container h1 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.8rem;
+  color: #0f0f2d;
+}
+.header__general__container button {
+  padding: 5px;
+  width: 115px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #555a88;
+  text-align: center;
+  font-size: 0.75rem;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.header__general__container button span {
+  width: 35px;
+  height: 25px;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__general__container button span i {
+  width: 100%;
+}

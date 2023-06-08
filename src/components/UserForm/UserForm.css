@@ -1,0 +1,132 @@
+.modal {
+  display: none;
+}
+.visible {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.308);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+}
+.modal.visible {
+  animation: spin-in 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: center center;
+  transform: scale(1);
+}
+@keyframes spin-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ===================FORM================ */
+.user__form__container {
+  padding: 32px 25px;
+  width: 92%;
+  max-width: 400px;
+  background-color: #ffffff;
+  position: relative;
+}
+.user__form__container h2 {
+  width: 100%;
+  max-width: 355px;
+  height: 45px;
+  font-family: Helvetica;
+  font-weight: 700;
+  text-align: left;
+}
+.user__form__close__btn {
+  position: absolute;
+  width: 27px;
+  height: 25px;
+  padding: 5px;
+  top: 0.4rem;
+  right: 0.4rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.203);
+  color: #000000;
+  text-align: center;
+}
+.user__form__close__btn:hover {
+  transform: rotate(360deg);
+  transition: 0.5s ease;
+}
+.user__form__input__container {
+  width: 100%;
+  max-width: 355px;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.user__form__input__container label {
+  cursor: pointer;
+}
+.user__form__input__container input {
+  height: 30px;
+  max-width: 355px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(176, 172, 172);
+  outline: none;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+}
+.user__form__input__container input::placeholder {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+.user__form__input__container input:hover {
+  outline: 2px solid rgb(99, 122, 172);
+}
+.user__form__input__container input:focus {
+  outline: 2px solid rgb(99, 122, 172);
+}
+.input__date {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+}
+.input__btn__submit {
+  width: 100%;
+  max-width: 355px;
+  height: 34px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: #555a88;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.input__btn__submit span {
+  padding: 8px;
+  display: inline-block;
+  transition: 0.25s ease-in;
+  text-align: center;
+}
+.input__btn__submit span:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-out;
+}

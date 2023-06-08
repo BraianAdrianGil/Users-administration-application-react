@@ -1,0 +1,246 @@
+.empty__users__general__container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 225px;
+}
+.empty__users__general__container h3 {
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #0f0f2d;
+}
+.empty__users__general__container h3 span {
+  font-size: 1.5rem;
+  color: rgb(230, 156, 17);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.empty__users__p__container p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #0f0f2d;
+  padding-top: 0.5rem;
+}
+/* USERS LIST ======================================= */
+.grid__users__list {
+  padding: 2rem 10px 0.5rem 10px;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 381px));
+  gap: 3rem;
+}
+.user__card__general__container {
+  padding: 10px;
+  width: 280px;
+  max-width: 381px;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.user__card__general__container:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.user__card__general__container h3 {
+  color: #0f0f2d;
+  font-family: "Helvetica", sans-serif;
+  width: 100%;
+  max-width: 339px;
+  height: 100%;
+  line-height: 33px;
+}
+.user__card__general__container ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-bottom: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  color: #b4b3b4;
+}
+.user__card__general__container ul li span {
+  font-family: "Helvetica", sans-serif;
+  font-size: 0.8rem;
+  color: #302f2f;
+  position: relative;
+}
+.gift {
+  font-size: 1rem;
+  margin-right: 0.1rem;
+  color: #212121;
+  position: relative;
+  top: 1px;
+}
+.user__card__btns__general__container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+.delete__btn {
+  width: 30px;
+  aspect-ratio: 1;
+  border: 1px solid #d93f3f;
+  border-radius: 4px;
+  background: linear-gradient(0deg, #d85d5d, #d85d5d),
+    linear-gradient(0deg, #d93f3f, #d93f3f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.delete__btn i {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.edit__btn {
+  width: 30px;
+  aspect-ratio: 1;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  background: linear-gradient(0deg, #f7f7f7, #f7f7f7),
+    linear-gradient(0deg, #bdbdbd, #bdbdbd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.edit__btn i {
+  font-size: 1.2rem;
+  color: #c2c2c2;
+}
+/* SHOW CONFIRMATION MODAL======================= */
+.modal {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.confirmation__delete__modal {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.308);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
+  animation: spin-in 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: center center;
+  transform: scale(1);
+}
+@keyframes spin-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* CONFIRMATION CARD=========================================== */
+.confirmation__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 25px;
+  width: 92%;
+  max-width: 350px;
+  height: 421px;
+  background-color: #ffffff;
+  position: relative;
+}
+.close__confirmation__modal__btn {
+  position: absolute;
+  width: 27px;
+  height: 25px;
+  padding: 5px;
+  top: 0.4rem;
+  right: 0.4rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.151);
+  color: #000000;
+  text-align: center;
+}
+.close__confirmation__modal__btn:hover {
+  transform: rotate(360deg);
+  transition: 0.5s ease;
+}
+.confirmation__card h3 {
+  width: 100%;
+  max-width: 355px;
+  height: 45px;
+  font-size: 2rem;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #0f0f2d;
+}
+.confirmation__card p {
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  font-size: 1rem;
+}
+.confirmation__card p b {
+  color: #0f0f2d;
+}
+.bx__interrogation {
+  font-size: 5.5rem;
+  color: #0f0f2d;
+}
+.confirmation__btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.not__sure__btn,
+.sure__btn {
+  padding: 5px;
+  width: 45px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #555a88;
+  color: #ffffff;
+  font-family: "Helvetica", sans-serif;
+}
+.confirmation__btns button span {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  transition: 0.25s ease-in;
+}
+.not__sure__btn span:hover,
+.sure__btn span:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease-out;
+}
