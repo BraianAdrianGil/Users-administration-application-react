@@ -232,6 +232,8 @@
   background-color: #555a88;
   color: #ffffff;
   font-family: "Helvetica", sans-serif;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 .confirmation__btns button span {
   width: 100%;
@@ -239,8 +241,8 @@
   text-align: center;
   transition: 0.25s ease-in;
 }
-.not__sure__btn span:hover,
-.sure__btn span:hover {
+.not__sure__btn:hover,
+.sure__btn:hover {
   transform: scale(1.2);
   transition: 0.3s ease-out;
 }
